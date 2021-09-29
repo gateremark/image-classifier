@@ -1,0 +1,673 @@
+/*Dynamic class changes used to highlight the current class box*/
+.nohighlightOne {
+    border: none;
+    background: rgba(0, 179, 255, 0.3);
+}
+
+.highlightOne {
+    border: 4px solid white;
+    background: rgba(0, 179, 255, 0.8) !important;
+}
+
+.nohighlightTwo {
+    border: none;
+    background: rgba(80, 255, 234, 0.3);
+}
+
+.highlightTwo {
+    border: 4px solid white;
+    background: rgba(80, 255, 234, 0.8) !important;
+}
+
+.nohighlightThree {
+    border: none;
+    background: rgb(174, 71, 75);
+}
+
+.highlightThree {
+    border: 4px solid white;
+    background: rgb(253, 45, 53) !important;
+}
+
+
+/*Main App Container*/
+#mainContainer-grid-video {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: rgb(40, 40, 40);
+    width: 90%;
+    height: 740px;
+    text-align: center;
+    display: none;
+    visibility: hidden;
+    grid-template-areas:
+        'header header header header'
+        'video video class1 class1'
+        'video video class2 class2'
+        'video video class3 class3'
+        'footer footer footer footer';
+}
+
+@media only screen and (max-width: 1200px) {
+    #mainContainer-grid-video {
+        position: relative;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background: rgb(40, 40, 40);
+        width: 90%;
+        height: 740px;
+        text-align: center;
+        display: none;
+        visibility: hidden;
+        grid-template-areas:
+            'header header header header'
+            'video video video video'
+            'class1 class1 class1 class1'
+            'class2 class2 class2 class2'
+            'class3 class3 class3 class3'
+            'footer footer footer footer';
+    }
+}
+
+/*Grid System using css grid style */
+.gridItem-video {
+    text-align: center;
+}
+
+.header-video {
+    grid-area: header;
+    height: 58px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.camera-video {
+    grid-area: video;
+    height: 624px;
+    position: relative;
+    visibility: hidden;
+}
+
+.thumbnail-img {
+    width: 40px;
+    height: 40px;
+}
+
+.class1-video {
+    grid-area: class1;
+    height: 208px;
+    position: relative;
+    visibility: hidden;
+}
+
+.class2-video {
+    grid-area: class2;
+    height: 208px;
+    position: relative;
+    visibility: hidden;
+}
+
+.class3-video {
+    grid-area: class3;
+    height: 208px;
+    position: relative;
+    visibility: hidden;
+}
+
+.footer-video {
+    grid-area: footer;
+    height: 58px;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+#predicetd-video {
+    position: absolute;
+    color: white;
+    left: 0;
+    top: 16px;
+    right: 0;
+    font-family: myFont, 'Arial Narrow Bold', sans-serif;
+    font-size: 26px;
+}
+
+#predicted-video-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50px;
+    width: 400px;
+}
+
+#camera-video-image {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 100px;
+    width: 515px;
+    height: 500px;
+    z-index: 2;
+}
+
+#camera-file-image {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 100px;
+    width: 515px;
+    height: 500px;
+    z-index: 2;
+}
+
+#brain-image {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 208px;
+    width: 130px;
+    height: 130px;
+    z-index: 0;
+    animation: pulse 3s infinite;
+    opacity: 0.1;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 0.1;
+    }
+}
+
+/*Radio and Checkbox buttons */
+#checkbox-area {
+    margin-right: -20px;
+}
+
+.app-radio {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    position: relative;
+    background-color: rgba(191, 87, 87, 0.8);
+    color: white;
+    top: 10px;
+    height: 30px;
+    width: 30px;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 7px;
+    outline: none;
+}
+
+.app-radio:checked:before {
+    position: absolute;
+    font: 13px/1 'Open Sans', sans-serif;
+    left: 9px;
+    top: 3px;
+    content: '\02143';
+    transform: rotate(40deg);
+    font-size: 20px;
+}
+
+.app-radio:hover {
+    background-color: rgba(191, 87, 87, 0.9);
+}
+
+.app-radio:checked {
+    background-color: #00947b;
+}
+
+label {
+    font: 300 16px/1.7 'Open Sans', sans-serif;
+    margin-right: 20px;
+    margin-left: 2px;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 1px;
+    font-family: myFont, 'Arial Narrow Bold', sans-serif;
+    font-size: 22px;
+    top: 6px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.app-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    position: relative;
+    background-color: rgba(191, 87, 87, 0.8);
+    color: white;
+    top: 10px;
+    height: 30px;
+    width: 30px;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 7px;
+    outline: none;
+}
+
+.app-checkbox:checked:before {
+    position: absolute;
+    font: 13px/1 'Open Sans', sans-serif;
+    left: 9px;
+    top: 3px;
+    content: '\02143';
+    transform: rotate(40deg);
+    font-size: 20px;
+}
+
+.app-checkbox:hover {
+    background-color: rgba(191, 87, 87, 0.9);
+}
+
+.app-checkbox:checked {
+    background-color: #00947b;
+}
+
+#reset-area {
+    position: absolute;
+    top: 8px;
+    right: 0px;
+    width: 79px;
+    height: 35px;
+    cursor: pointer;
+}
+
+#reset {
+    background: none;
+    border: 1px solid white;
+    border-radius: 7px;
+    color: rgba(255, 255, 255, 0.712);
+    font-size: 21px;
+    width: 100%;
+    height: 100%;
+    font-family: myFont, 'Arial Narrow Bold', sans-serif;
+    transition: all 0.5s;
+}
+
+#reset:hover {
+    color: rgb(255, 255, 255);
+}
+
+#help-area {
+    position: absolute;
+    top: 9px;
+    left: 0px;
+    width: 79px;
+    height: 35px;
+    cursor: pointer;
+}
+
+#help {
+    background: none;
+    border: 1px solid white;
+    border-radius: 7px;
+    color: rgba(255, 255, 255, 0.712);
+    font-size: 21px;
+    width: 100%;
+    height: 100%;
+    font-family: myFont, 'Arial Narrow Bold', sans-serif;
+    transition: all 0.5s;
+}
+
+#help:hover {
+    color: rgb(255, 255, 255);
+}
+
+/*Camera Image section*/
+#video-container {
+    position: absolute;
+    margin: auto;
+    right: 0;
+    left: 0;
+    top: 123px;
+    z-index: 1;
+}
+
+#video-classify {
+    display: block;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 196px;
+    z-index: 3;
+}
+
+.class-thumbnail {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 260px;
+    height: 180px;
+    border-radius: 20px;
+    background: rgba(10, 10, 10, 0.6);
+}
+
+/*From Video add class section*/
+.class-wrapper {
+    width: 550px;
+    height: 200px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 16px;
+}
+
+.firstWrapper {
+    background: rgba(0, 179, 255, 0.3);
+}
+
+.class-input {
+    background: #282828;
+    border-radius: 8px;
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 27px;
+    margin: auto;
+    border: none;
+    text-align: center;
+    font-size: 17px;
+    color: white;
+    font-family: myFont, 'Arial Narrow Bold', sans-serif;
+
+}
+
+.class-input::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.class-input::-moz-placeholder {
+    /* Firefox 19+ */
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#video-button-1 {
+    display: inline;
+    width: 150px;
+    height: 50px;
+    font-family: myFont, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    background: white;
+    border-radius: 10px;
+    top: 90px;
+    position: relative;
+    transition: all 0.5s;
+    border: none;
+}
+
+#video-button-1:hover {
+    width: 160px;
+    height: 60px;
+}
+
+#class-1-examples {
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    right: 0;
+    font-family: myFont, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+.secondWrapper {
+    background: rgba(80, 255, 234, 0.3);
+}
+
+#video-button-2 {
+    display: inline;
+    width: 150px;
+    height: 50px;
+    font-family: myFont, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    background: white;
+    border-radius: 10px;
+    top: 90px;
+    position: relative;
+    transition: all 0.5s;
+    border: none;
+}
+
+#video-button-2:hover {
+    width: 160px;
+    height: 60px;
+}
+
+#class-2-examples {
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    right: 0;
+    font-family: myFont, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+.thirdWrapper {
+    background: rgb(174, 71, 75);
+}
+
+#video-button-3 {
+    display: inline;
+    width: 150px;
+    height: 50px;
+    font-family: myFont, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    background: white;
+    border-radius: 10px;
+    top: 90px;
+    position: relative;
+    transition: all 0.5s;
+    border: none;
+}
+
+#video-button-3:hover {
+    width: 160px;
+    height: 60px;
+}
+
+#class-3-examples {
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    right: 0;
+    font-family: myFont, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+.class-ui {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    height: 180px;
+    width: 260px;
+}
+
+.row {
+    margin-left: 35px;
+}
+
+.row:nth-of-type(1) {
+    margin-top: 10px;
+}
+
+/*From File add class section*/
+.file-input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.file-input+label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background: rgba(40, 40, 40, 0.6);
+    border-radius: 8px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 65px;
+    height: 55px;
+    margin: auto;
+    top: 92px;
+    transition: all 0.5s;
+}
+
+.file-input:focus+label,
+.file-input+label:hover {
+    background: rgb(40, 40, 40);
+    cursor: pointer;
+}
+
+.fig-upload {
+    margin: 0;
+    top: 10px;
+    position: relative;
+}
+
+.fig-cap-upload {
+    font-size: 16px;
+    width: 180px;
+    position: relative;
+    right: 55px;
+    top: 121px;
+    color: #282828;
+    left: 40px;
+    font-family: myFont, 'Arial Narrow Bold', sans-serif;
+}
+
+#file-container {
+    display: block;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 138px;
+}
+
+#loadedImg {
+    position: relative;
+    top: 54px;
+    width: 253px;
+    height: 165px;
+}
+
+#file-input-classify-container {
+    position: absolute;
+    width: 300px;
+    height: 55px;
+    left: 0;
+    right: 0;
+    bottom: 188px;
+    margin: auto;
+    border-radius: 7px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+#file-input-classify {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+#file-input-classify+label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background: rgba(40, 40, 40, 0.5);
+    border-radius: 17px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 80px;
+    height: 69px;
+    margin: auto;
+    top: 20px;
+}
+
+.fig-classify {
+    margin: 0;
+    top: -4px;
+    position: absolute;
+    left: -7px;
+    cursor: pointer;
+}
+
+.fig-cap-classify {
+    font-size: 20px;
+    width: 300px;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: all 0.5s;
+    font-family: myFont, 'Arial Narrow Bold', sans-serif;
+}
+
+.fig-cap-classify:hover {
+    color: #00947b;
+}
+
+#footer-name {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 300px;
+    height: 40px;
+}
+
+#footer-name p {
+    font-family: myFont, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.6);
+    position: relative;
+    top: 10px;
+}

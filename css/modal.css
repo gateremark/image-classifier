@@ -1,0 +1,244 @@
+body.modal-open {
+  overflow: scroll;
+}
+
+.modal.tutorial {
+  position: relative;
+  top: -600px;
+  right: 0;
+  margin: auto;
+  width: auto;
+  height: 740px;
+}
+.modal-header {
+  height: 80px;
+}
+.modal-title {
+  margin: 5px;
+  line-height: 1.42857143;
+  font-size: 30px;
+}
+.modal-header .close {
+  margin-top: -60px;
+  font-size: 35px;
+  opacity: 0.7;
+}
+.modal-header .close:hover {
+  font-size: 35px;
+  opacity: 1;
+}
+.modal-body {
+  height: 500px;
+  font-size: 16px;
+  overflow-y: scroll;
+}
+.down-arrow {
+  position: fixed;
+  border-radius: 6px;
+  width: 31px;
+  height: 75px;
+  background: rgba(0, 0, 0, 0);
+  bottom: 93px;
+  right: 4px;
+}
+.arrow {
+  position: relative;
+  left: 6px;
+  right: 0;
+  top: 5px;
+  bottom: 0;
+  margin: auto;
+  width: 10px;
+  height: 30px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #403e3e;
+  animation: animate 1.5s linear infinite;
+}
+@keyframes animate {
+  0% {
+    top: 5px;
+  }
+  25% {
+    top: 11px;
+  }
+  50% {
+    top: 5px;
+  }
+  75% {
+    top: -1px;
+  }
+  100% {
+    top: 5px;
+  }
+}
+#toggle-tutorial-img {
+  width: 210px;
+  height: 30px;
+  position: relative;
+  top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 7px;
+  display: block;
+}
+#upload-tutorial-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 7px;
+}
+#classifyFile-tutorial-img {
+  width: 262px;
+  height: 44px;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 6px;
+  margin: auto;
+  border-radius: 7px;
+  display: block;
+}
+.predict-tutorial-img {
+  width: 262px;
+  height: 44px;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 16px;
+  margin: auto;
+  border-radius: 7px;
+  display: block;
+}
+.reset-tutorial-img {
+  width: 128px;
+  height: 53px;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 20px;
+  margin: auto;
+  border-radius: 7px;
+  display: block;
+}
+.help-tutorial-img {
+  width: 128px;
+  height: 53px;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 12px;
+  margin: auto;
+  border-radius: 7px;
+  display: block;
+}
+#permission-tutorial-img {
+  width: 250px;
+  height: 100px;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 12px;
+  margin: auto;
+  border-radius: 7px;
+  display: block;
+  border: 1px solid lightgray;
+}
+#camera-tutorial-img {
+  width: 194px;
+  height: 170px;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 12px;
+  margin: auto;
+  border-radius: 7px;
+  display: block;
+  border: 1px solid lightgray;
+}
+#class-tutorial-img {
+  width: 140px;
+  height: 55px;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 12px;
+  margin: auto;
+  border-radius: 7px;
+  display: block;
+  border: 1px solid lightgray;
+}
+#classify-video-tutorial-img {
+  width: 208px;
+  height: 50px;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 6px;
+  margin: auto;
+  border-radius: 7px;
+  display: block;
+}
+.className-tutorial-img {
+  width: 208px;
+  height: 50px;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 6px;
+  margin: auto;
+  border-radius: 7px;
+  display: block;
+}
+.modal-footer {
+  height: 90px;
+}
+.prevFromFile.btn.btn-primary {
+  width: 115px;
+  background: rgba(255, 166, 90, 0.6);
+  height: 45px;
+  border-radius: 4px;
+  font-family: myFont, "Arial Narrow Bold", sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  left: 15px;
+  bottom: 22px;
+  border: none;
+}
+.prevFromFile.btn.btn-primary:hover {
+  background: rgba(255, 166, 90, 0.8);
+}
+.nextFromFile.btn.btn-primary {
+  width: 100px;
+  background: rgba(0, 128, 0, 0.4);
+  height: 45px;
+  border-radius: 4px;
+  font-family: myFont, "Arial Narrow Bold", sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  position: absolute;
+  color: rgba(0, 0, 0, 0.6);
+  right: 130px;
+  bottom: 22px;
+  border: none;
+}
+.nextFromFile.btn.btn-primary:hover {
+  background: rgba(0, 128, 0, 0.6);
+}
+.btn {
+  width: 100px;
+  height: 45px;
+  border-radius: 4px;
+  font-family: myFont, "Arial Narrow Bold", sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  right: 15px;
+  bottom: 22px;
+}
+.btn:hover {
+  background: rgba(0, 0, 0, 0.2);
+}

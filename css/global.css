@@ -1,0 +1,20 @@
+
+@import url('intro.css');
+@import url('main.css');
+@import url('modal.css');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background: rgb(40,40,40);
+}
+button:focus{
+    outline:0;
+}
+input[type = "checkbox"]:focus{
+    outline:0;
+}
+input[type = "radio"]:focus{
+    outline:0;
+}

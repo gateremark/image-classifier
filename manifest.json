@@ -1,0 +1,27 @@
+
+{
+  "short_name": "Updated- Image_Classifier_Video",
+  "name": "Updated Approved - Image Classifier Video",
+  "description": "This plugin is an interactive simulation of an image classifier.",
+  "maintainer": {
+    "name": "Louis McCallum",
+    "email": "l.mccallum@gold.ac.uk"
+  },
+  "version": "0.1",
+  "configurationExamples": [{
+    "configuration": {
+
+    },
+    "name": "My Config",
+    "description": "Simple config."
+  }],
+  "macros": [],
+  "authorizations": {
+  },
+  "actionTypes": ["GET_SESSION_CONFIGURATION","SET_HEIGHT"],
+  "accessibility": {
+    "mobileCompatibility": {
+      "supportsTouch": false
+    }
+  }
+}

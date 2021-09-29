@@ -1,0 +1,102 @@
+@font-face {
+  font-family: "myFont";
+  src: url("../fonts/impact.ttf");
+}
+
+#introContainer {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: rgb(40, 40, 40);
+  width: 90%;
+  height: 740px;
+  text-align: center;
+  display: none;
+}
+
+#introImage {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  top: -200px;
+  right: 0;
+  bottom: 0;
+  width: 764px;
+  height: 500px;
+}
+
+#introImageActive {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  top: -200px;
+  right: 0;
+  bottom: 0;
+  width: 764px;
+  height: 500px;
+  display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  #introImage {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: -200px;
+    right: 0;
+    bottom: 0;
+    width: 500px;
+    height: 350px;
+  }
+
+  #introImageActive {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: -200px;
+    right: 0;
+    bottom: 0;
+    width: 500px;
+    height: 350px;
+    display: none;
+  }
+}
+
+#menuTitle {
+  position: relative;
+  top: 500px;
+  margin: 0;
+  font-family: myFont, "Arial Narrow Bold", sans-serif;
+  font-size: 60px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+hr {
+  position: relative;
+  top: 500px;
+  width: 550px;
+}
+
+#begin {
+  position: relative;
+  top: 530px;
+  font-family: myFont, "Arial Narrow Bold", sans-serif;
+  font-size: 35px;
+  width: 200px;
+  height: 55px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  background: rgb(40, 40, 40);
+  border: 1px solid rgb(128, 128, 128);
+  transition: all 2s;
+}
+
+#begin:hover {
+  width: 250px;
+  height: 60px;
+  background: rgba(255, 220, 154, 0.322);
+}
